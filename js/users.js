@@ -20,14 +20,15 @@ const users = [
 ]
 
 function login() {
+    let saldoActual = users[0]
     let name = document.getElementById('username').value;
     let user = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
 
     if (user === 'mil@mil.com' && pass === '123') {
-        sessionStorage.setItem('user', user);
         window.location.href = "info.html";
-
+        let user1 = users[0];
+        document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
 
     } else {
         alert('error');
@@ -35,5 +36,6 @@ function login() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-document.getElementById('welcome').innerText = `Hola ${sessionStorage.getItem('username')}`;
+    document.getElementById('welcome').innerText = `Hola`;
+
 });
