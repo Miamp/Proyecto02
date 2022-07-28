@@ -20,12 +20,20 @@ const users = [
 ]
 
 function login() {
-    let user = document.getElementById(email).value;
-    let pass = documet.getElementById(password).value;
+    let name = document.getElementById('username').value;
+    let user = document.getElementById('email').value;
+    let pass = document.getElementById('password').value;
 
     if (user === 'mil@mil.com' && pass === '123') {
+        sessionStorage.setItem('user', user);
         window.location.href = "info.html";
+
+
     } else {
         alert('error');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('welcome').innerText = `Hola ${sessionStorage.getItem('username')}`;
+});
