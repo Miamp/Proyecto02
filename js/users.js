@@ -20,22 +20,30 @@ const users = [
 ]
 
 function login() {
-    let saldoActual = users[0]
-    let name = document.getElementById('username').value;
+
     let user = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
 
-    if (user === 'mil@mil.com' && pass === '123') {
-        window.location.href = "info.html";
-        let user1 = users[0];
-        document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
 
+    ////findindex realizar una arrow function y de ahi sacar el objeto, y con session storage conseguir los datos
+    if (index = users.findIndex(element => element === user)) {
+        window.location.href = "info.html";
     } else {
-        alert('error');
+        alert('Error de usuario')
     }
 }
 
+/* if (user === 'mil@mil.com' && pass === '123') {
+     window.location.href = "info.html";
+     //let user1 = users[0];
+     document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
+
+ } else {
+     alert('error');
+ }
+}*/
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('welcome').innerText = `Hola`;
+    document.getElementById('welcome').innerText = `Hola`
 
 });
