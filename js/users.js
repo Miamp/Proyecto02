@@ -23,27 +23,26 @@ function login() {
 
     let user = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
+    //let saldoActual = users.filter(element => element === saldo)
 
-
-    ////findindex realizar una arrow function y de ahi sacar el objeto, y con session storage conseguir los datos
     if (index = users.findIndex(element => element === user)) {
+        sessionStorage.setItem('user', user);
         window.location.href = "info.html";
-    } else {
-        alert('Error de usuario')
+        let saldoActual = users.findIndex(saldo[user]);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('welcome').innerText = `Hola`
+            document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
+        });
     }
 }
 
 /* if (user === 'mil@mil.com' && pass === '123') {
      window.location.href = "info.html";
      //let user1 = users[0];
-     document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
+     
 
  } else {
      alert('error');
  }
 }*/
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('welcome').innerText = `Hola`
-
-});
