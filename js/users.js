@@ -19,13 +19,13 @@ const users = [
     }
 ]
 
-function login() {
+/*function login() {
 
     let user = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
-    //let saldoActual = users.filter(element => element === saldo)
+    index = users.findIndex(element => element === user);
 
-    if (index = users.findIndex(element => element === user)) {
+    if (users[index]) {
         sessionStorage.setItem('user', user);
         window.location.href = "info.html";
         let saldoActual = users.findIndex(saldo[user]);
@@ -35,14 +35,31 @@ function login() {
             document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldoActual}`
         });
     }
-}
-
-/* if (user === 'mil@mil.com' && pass === '123') {
-     window.location.href = "info.html";
-     //let user1 = users[0];
-     
-
- } else {
-     alert('error');
- }
 }*/
+
+function login() {
+    let user = document.getElementById('email').value;
+    let pass = document.getElementById('password').value;
+
+    if (user === 'mil@mil.com' && pass === '123') {
+        sessionStorage.setItem('user', user);
+        window.location.href = "info.html";
+        let saldo = 500;
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('welcome').innerText = 'Hola';
+            document.getElementById('cont-txt').innerText = `Tu saldo actual es: ${saldo}`;
+        }); 
+        function depositar(){
+            let sum = Number (prompt ('¿Cuanto vas a depositar?'));
+            let saldoActual = saldo + sum;
+            alert (`Tu saldo actual es ${saldoActual}`);
+        }
+        function retirar (){
+            let res = Number (prompt('¿Cuanto vas a retirar?'));
+            let saldoActual = saldo-res;
+            alert(`Tu saldo actual es: ${saldoActual}`);
+        }
+    } else {
+        alert('error');
+    }
+}
