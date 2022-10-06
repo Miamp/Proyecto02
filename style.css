@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.Camber-1-hex { color: #79D988; }
+.Camber-2-hex { color: #5DA668; }
+.Camber-3-hex { color: #F2A341; }
+.Camber-4-hex { color: #F26052; }
+.Camber-5-hex { color: #F2E9E9; }
+
+/* Color Theme Swatches in RGBA */
+.Camber-1-rgba { color: rgba(121, 216, 135, 1); }
+.Camber-2-rgba { color: rgba(92, 165, 103, 1); }
+.Camber-3-rgba { color: rgba(242, 162, 65, 1); }
+.Camber-4-rgba { color: rgba(242, 95, 82, 1); }
+.Camber-5-rgba { color: rgba(242, 233, 232, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Camber-1-hsla { color: hsla(129, 55, 66, 1); }
+.Camber-2-hsla { color: hsla(129, 29, 50, 1); }
+.Camber-3-hsla { color: hsla(33, 87, 60, 1); }
+.Camber-4-hsla { color: hsla(5, 86, 63, 1); }
+.Camber-5-hsla { color: hsla(5, 27, 93, 1); }
